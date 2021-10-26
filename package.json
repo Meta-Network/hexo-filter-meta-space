@@ -1,0 +1,47 @@
+{
+  "name": "hexo-filter-meta-space",
+  "version": "0.0.1",
+  "description": "Merge configs from meta space config file to hexo.",
+  "license": "MIT",
+  "author": "Meta Network Group",
+  "homepage": "https://github.com/Meta-Network/hexo-filter-meta-space#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Meta-Network/hexo-filter-meta-space.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Meta-Network/hexo-filter-meta-space/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write \"*.js\"",
+    "lint": "eslint \"*.js\" --fix",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "hexo-fs": "^3.1.0",
+    "hexo-util": "^2.4.0"
+  },
+  "devDependencies": {
+    "@types/hexo-fs": "^0.2.10",
+    "@types/hexo-util": "^0.6.3",
+    "@types/node": "^16.11.6",
+    "eslint": "^8.1.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^11.2.4",
+    "prettier": "^2.4.1"
+  },
+  "peerDependencies": {
+    "hexo": "^5.4.0"
+  },
+  "lint-staged": {
+    "*.{js,ts}": "eslint --cache --fix"
+  }
+}
