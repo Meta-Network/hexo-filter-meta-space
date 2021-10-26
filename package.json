@@ -1,6 +1,6 @@
 {
   "name": "hexo-filter-meta-space",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Merge configs from meta space config file to hexo.",
   "license": "MIT",
   "author": "Meta Network Group",
@@ -23,7 +23,8 @@
   },
   "dependencies": {
     "hexo-fs": "^3.1.0",
-    "hexo-util": "^2.4.0"
+    "hexo-util": "^2.4.0",
+    "picocolors": "^1.0.0"
   },
   "devDependencies": {
     "@types/hexo-fs": "^0.2.10",

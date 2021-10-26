@@ -1,10 +1,11 @@
 const fs = require('hexo-fs');
 const { deepMerge } = require('hexo-util');
 const path = require('path');
+const color = require('picocolors');
 
 // eslint-disable-next-line no-undef
 hexo.extend.filter.register('after_init', async function () {
-  const { base_dir, render } = this;
+  const { base_dir, render, log } = this;
 
   const metaConfigPath = path.join(base_dir, 'meta-space-config.yml');
   const isExists = await fs.exists(metaConfigPath);
@@ -29,4 +30,5 @@ hexo.extend.filter.register('after_init', async function () {
   }
 
   this.config = deepMerge(this.config, hexoConfig);
+  log.debug(`Merged config: ${color.magenta(JSON.stringify(this.config))}`);
 });
