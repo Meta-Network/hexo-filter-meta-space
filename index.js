@@ -11,8 +11,9 @@ hexo.extend.filter.register('after_init', async function () {
   const isExists = await fs.exists(metaConfigPath);
   if (!isExists) return;
 
-  const metaConfig = await render.render({ path: metaConfigPath });
-  const { user, site } = metaConfig;
+  const metaSpaceConfig = await render.render({ path: metaConfigPath });
+  this.config = deepMerge(this.config, { metaSpaceConfig });
+  const { user, site } = metaSpaceConfig;
   const hexoConfig = {};
 
   if (site && user) {
