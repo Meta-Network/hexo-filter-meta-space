@@ -1,6 +1,6 @@
 {
-  "name": "hexo-filter-meta-space",
-  "version": "0.0.3",
+  "name": "@metaio/hexo-filter-meta-space",
+  "version": "1.0.0",
   "description": "Merge configs from meta space config file to hexo.",
   "license": "MIT",
   "author": "Meta Network Group",
@@ -36,11 +36,11 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "husky": "^7.0.4",
-    "lint-staged": "^11.2.4",
+    "lint-staged": "^12.3.6",
     "prettier": "^2.4.1"
   },
   "peerDependencies": {
-    "hexo": "^5.4.0"
+    "hexo": "^6.0.0"
   },
   "lint-staged": {
     "*.{js,ts}": "eslint --cache --fix"
